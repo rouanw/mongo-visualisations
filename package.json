@@ -1,0 +1,29 @@
+{
+  "name": "electron-mongo",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/electron-starter.js",
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chance": "^1.0.12",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "server": "node src/server.js",
+    "dev": "nodemon --watch src/server.js --exec yarn server"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "nodemon": "^1.12.5"
+  }
+}
