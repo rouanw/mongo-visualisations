@@ -22,8 +22,11 @@ app.post('/query', (req, res) => {
 connection.then((db) => {
   _db = db;
   _collection = _db.collection('test-collection');
-  _collection.insert(testData)
+  return _collection.remove({})
     .then(() => {
-      app.listen(app.get('port'), () => console.log(`Express listening on port ${app.get('port')}`));
-    });
+      return _collection.insert(testData)
+      .then(() => {
+        app.listen(app.get('port'), () => console.log(`Express listening on port ${app.get('port')}`));
+      });
+    })
 });
