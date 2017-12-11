@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend, Tooltip } from 'recharts';
 
 const DataChart = ({ data }) => (
   <LineChart width={730} height={250} data={data}
@@ -8,6 +8,7 @@ const DataChart = ({ data }) => (
     <XAxis dataKey="date" />
     <YAxis />
     <Legend />
+    <Tooltip />
     <Line type="monotone" dataKey="amount" stroke="#8884d8" />
   </LineChart>
 );
